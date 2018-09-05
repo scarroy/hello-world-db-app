@@ -1,0 +1,9 @@
+- name: hello-world-db-apb playbook to bind the application
+  hosts: scarroy-virt3.sandia.gov
+  gather_facts: false
+  roles:
+  - role: ansible.kubernetes-modules
+    install_python_requirements: no
+  - role: ansibleplaybookbundle.asb-modules
+  - role: bind-hello-world-db-apb
+    playbook_debug: false
